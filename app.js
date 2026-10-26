@@ -109,7 +109,16 @@ document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',e=>e.
     Futuro:"La pantalla empezó a mostrar fechas que todavía no existían. Primero mañana. Después la semana siguiente. Luego un año entero. —¿Quién controla esto? —preguntó. Nadie respondió. Una nueva imagen apareció con una escena del lugar donde estaban, pero tomada décadas después. Había cambios pequeños: una pared distinta, una ventana nueva y una persona que no reconocían. En la esquina aparecía una advertencia: «No repitas la decisión anterior». El personaje comprendió que ya había vivido aquel momento en otra línea temporal. El verdadero misterio no era qué iba a pasar, sino por qué alguien quería que cambiara.\n\nLa prueba comenzó a mostrar nuevas fechas y escenas que todavía no habían ocurrido. Una imagen enseñaba el mismo lugar décadas después. —Entonces podemos cambiarlo —dijo uno. —Quizá —respondió el otro—, pero cada cambio crea otra posibilidad. Compararon las diferentes versiones y encontraron una decisión que aparecía en todas. Era el único momento que nadie podía modificar. Justo cuando iban a descubrir de qué se trataba, la pantalla mostró una advertencia: «Quedan diez minutos para elegir». El futuro ya no era una predicción. Era una decisión."
   };
   if(!Array.isArray(dialogues)||!dialogues.length||!Array.isArray(stories))return;
-  const expanded=dialogues.map((text,i)=>text+"\n\n"+(tails[stories[i]?.cat]||tails.Misterio));
+  // Cada historia es un array: [categoría, título, resumen, tiempo].
+  // Usamos la categoría real (índice 0) para no añadir siempre el final de misterio.
+  const expanded=dialogues.map((text,i)=>{
+    const category=stories[i]?.[0] || "Misterio";
+    return text+"\n\n"+(tails[category]||tails.Misterio);
+  });
   dialogues.splice(0,dialogues.length,...expanded);
-  stories.forEach((s,i)=>{const words=(dialogues[i]||'').trim().split(/\s+/).length;s.time=Math.max(2,Math.ceil(words/150))+' min';});
+  // Actualizar el tiempo en el campo que realmente lee la interfaz (índice 3).
+  stories.forEach((s,i)=>{
+    const words=(dialogues[i]||"").trim().split(/\s+/).filter(Boolean).length;
+    s[3]=Math.max(1,Math.ceil(words/180))+" min";
+  });
 })();
