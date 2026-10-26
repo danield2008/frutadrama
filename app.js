@@ -122,4 +122,7 @@ document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',e=>e.
     const words=(dialogues[i]||"").trim().split(/\s+/).filter(Boolean).length;
     s[3]=Math.max(1,Math.ceil(words/180))+" min";
   });
+  // La lista se dibujó antes de ampliar los relatos; volver a pintarla con los tiempos nuevos.
+  if(typeof render==="function")render();
+  if(typeof renderTrend==="function")renderTrend();
 })();
