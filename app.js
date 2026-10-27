@@ -29,7 +29,6 @@ const stories=[
 ["Misterio","El coco que no aparecía en los espejos","Todos podían verlo menos los espejos.","52 s"],
 ["Drama","La naranja que escuchó su propio funeral","Escuchó una conversación sobre su muerte antes de que ocurriera.","56 s"],
 ["Humor","La uva que inventó un día extra","La uva decidió que siete días por semana eran demasiado pocos.","38 s"]
-,
 ["Misterio","El mensaje que llegó desde mañana","El móvil mostró un mensaje enviado por ella misma… a las 08:42 del día siguiente.","58 s"],
 ["Drama","La naranja que llamó a emergencias","Llamó para avisar de un accidente. El operador le dio la dirección de su propia casa.","1 min"],
 ["Misterio","El ascensor del piso 0","El edificio empezaba en el 1. Aun así, cada noche aparecía un botón nuevo.","54 s"],
@@ -74,7 +73,6 @@ const dialogues=[
 "—Mírate al espejo —dijo el coco. No había reflejo. En un laboratorio encontró una frase: «El espejo no muestra lo que eres». Su reflejo apareció y señaló una puerta. Detrás había decenas de versiones de él. Todos hablaron a la vez: —No tengas miedo. La primera vez tampoco lo tuviste.",
 "—¿Por qué suena música de funeral? La naranja encontró una grabadora fechada tres días después. Su propia voz dijo: «Gracias por venir». En una fotografía del funeral había una fruta que nadie conocía. El móvil vibró: «No vayas al funeral». Otro mensaje: «Ve hoy».",
 "—He inventado un octavo día —dijo la uva. —Eso no existe. El calendario cambió. Llegó un mensaje: «Gracias por crear el día que faltaba». Apareció una fruta idéntica a ella. —Soy quien creó el primer día extra. —Entonces te toca crear el segundo."
-,
 "—Mira esto —dijo ella. En su móvil había un mensaje enviado desde su propio número. —¿Qué pone? —«Mañana, 08:42. No contestes a la puerta». —Pero mañana todavía no ha llegado. El reloj cambió. 08:42. El mensaje desapareció. Tres golpes sonaron en la puerta. —¿Quién es? —preguntó su amigo. Desde fuera respondió su propia voz: —Soy tú. Y ya he llegado tarde una vez.",
 "—Necesito ayuda —dijo la naranja al llamar a emergencias. —¿Qué ocurre? —Un coche ha tenido un accidente en la avenida 12. El operador miró la pantalla. —¿Está segura de la dirección? —Sí. —La dirección que acaba de dar es la de su propia casa. La naranja se quedó callada. Desde el piso de arriba llegó un golpe. —¿Hay alguien con usted? —preguntó el operador. —No. —Entonces no cuelgue. Acaba de entrar una llamada desde su mismo teléfono.",
 "—Ese botón no estaba ayer —dijo la fresa. El ascensor tenía plantas 1 a 12 y, debajo, un pequeño «0». Lo pulsó. Las puertas se cerraron. —¿A qué planta vamos? Una voz salió del altavoz: —A donde empezaste. Las puertas se abrieron a un pasillo idéntico al suyo, pero lleno de fotografías antiguas. En la última aparecía ella entrando en el ascensor. Debajo había una fecha de mañana.",
